@@ -1,35 +1,21 @@
 
 fun main(){
-    val maxValueByte:Byte=Byte.MAX_VALUE
-    val minValueByte:Byte=Byte.MIN_VALUE
-    println("maxvalue of maxValueByte is : $maxValueByte")
-    println("maxValue of minValueByte is : $minValueByte")
+    val isActive=true
+    val max=99
+    var getValue=if(isActive && max==100){
+        println("The value assigned is true")
+        max
+    }else{
+        println("The value assigned is false")
+        "hello"
+    }
+    println("value of max is :$getValue")
 
-    val maxValueShort:Short=Short.MAX_VALUE
-    val minValueShort:Short=Short.MIN_VALUE
-    println("maxvalue of maxValueShort is : $maxValueShort")
-    println("maxValue of minValueShort is : $minValueShort")
-
-    val maxValueInteger:Int=Int.MAX_VALUE
-    val minValueInteger:Int=Int.MIN_VALUE
-    println("maxvalue of maxValueInteger is : $maxValueInteger")
-    println("maxValue of minValueInteger is : $minValueInteger")
-
-
-    val maxValueLong:Long=Long.MAX_VALUE
-    val minValueLong:Long=Long.MIN_VALUE
-    println("maxvalue of maxValueShort is : $maxValueLong")
-    println("maxValue of minValueShort is : $minValueLong")
-    
-    val maxfloat=Float.MAX_VALUE
-    val minFloat=Float.MIN_VALUE
-    println("maxvalue of maxfloat is : $maxfloat")
-    println("maxValue of minFloat is : $minFloat")
-
-    val doubleValue:Double=2.5
-    println("double value is :$doubleValue")
-    val charValue="A"
-    println("char value is :$charValue")
-    val  booleanValue:Boolean=true
-    println("boolean value:$booleanValue")
+    val sampleValue=10
+    var s=when(sampleValue){
+        in 1..5 -> "between 1..5"
+        in 6..10 -> "between 6..10"
+        else->"not in above range"
+    }
+    println("$s")
 }
